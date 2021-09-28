@@ -106,6 +106,16 @@ const sendFile = async () => {
   // Create an array buffer from the file
   let buffer  = await selectedFile.arrayBuffer();
   localDataTrack.send(buffer);
+
+  // Notify the local participant that their file was sent
+  let notification = document.createElement('span');
+  notification.classList.add('notification');
+  notification.innerText = 'File sent! 📄';
+  files.appendChild(notification);
+
+  setTimeout(() => {
+    notification.remove();
+  }, 3000)
 }
 
 const participantConnected = (participant) => {

@@ -91,3 +91,8 @@ input:disabled {
   font-size: 48px;
   display: inline-flex;
 }
+
+.notification {
+  font-size: 20px;
+  color: #610f61;
+}
